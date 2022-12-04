@@ -140,10 +140,52 @@ int main(void)
     budget.c、BUDGET.c和Budget.c是3个不同但都有效的C源文件
     名。但是 BUDGET.C是无效文件名，因为该名称的扩展名使用了大
     写C而不是小写c。
-*/
 # include <stdio.h>
 int main()
 {
     printf("A.c is used to end a C program filename.\n");
     return 0;
 }
+    （1）UNIX C编译器要调用语言定义的cc命令；
+    （2）如果使用ls命令列出文件，会发现有一个a.out文件（见图
+        1.5）。该文件是包含已翻译（或已编译）程序的可执行文件
+    （3）C 编译器会创建一个与源代码基本名相同的目标代 码文件，
+        但是其扩展名是.o。在该例中，目标代码文件是 inform.o。
+        然而， 却找不到这个文件，因为一旦链接器生成了完整的可执
+        行程序，就会将其删除。如果原始程序有多个源代码文件，则
+        保留目标代码文件。
+    （4）GNU编译器集合（也被称 为GCC，其中包含GCC C编译器）
+        GCC有 各种版本以适应不同的硬件平台和操作系统，包括UNIX、
+        Linux和 Windows。用gcc命令便可调用GCC C编译器。许多使
+        用gcc的系统都用cc作为gcc的别名；
+    （5）LLVM项目成为cc的另一个替代品，它的 Clang编译器处理 C代
+        码，可以通过clang调用；
+    （6）使用cc 别名来代替gcc或clang命令；编译命令类似于： gcc 
+        inform.c
+    （7）编译器：MinGW在Windows的命令提示模式中运行
+    （8）编译器：Cygwin在自己的视窗运行，模仿Linux命令行环 境，有一行命令
+        提示
+    （9）集成开发环境：都提供Windows 下的集成开发环境，或称为IDE
+复习题：
+(1) 可移植性：可以跨平台；
+(2) 源代码：编写的文本文件，以点c为后缀名；
+    目标代码：源代码编译后的文件，以obj为后缀名，其中缺少启动代码、
+             和库函数；
+    可执行文件：将目标代码和库函数和启动代码链接后的文件，以exe为
+    后缀名；
+(3) 编程的7步：what、how、code、cc、run、debug、extend
+(4) 编译器：编译以c为后缀名的文本文件得到obj为后缀名的目标代码
+(5) 链接器：链接obj为后缀名的目标代码、启动代码(充当着程序与操作
+           系统的接口)、库函数得到exe为后缀名的可执行文件。
+# include <stdio.h>
+int main()
+{
+    float input=0;
+    float output=0;
+    printf("Please input your length?(With inch)\n");
+    scanf("%f", &input);
+    output =input*2.54;
+    printf("%f inch equal to %f cm\n", input, output);
+    return 0;
+}
+*/
