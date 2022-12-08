@@ -1,31 +1,38 @@
-// c language Introducing
+// C语言概述
 
-//# include   --preprocessor instruction
-//stdio.h is a standard part of all c compiler packages, which provide the support for keyboard input and for displaying output
-# include <stdio.h> /*the line tells the compiler to include the information found in the file stdio.h*/
-//main() is always the first function call
-//functions are made up of statements
-//functions are the building block of c
-//5 types of statements in c language
-/*
-statements including declaration、assignment、
-function、control、null
-*/
-
-/* a simple c program*///c language is made up keywords、identifiers、operations、data
-
-int main(void) //main is a function name 
-{//‘{’ begin of the body of the function
-    int num;//a declaration statement 
-    num =1;//an assignment statement 
-    printf("I am a simple ");//a function call statement 
-    printf("computer.\n");// \n is code telling the computer to start a new line 
+/*简单的C程序实例*/
+# include <stdio.h> 
+int main(void) /*这是一个简单的C程序*/
+{
+    int num; /*定义一个名为num的变量*/
+    num =1; /*为num赋一个值*/
+    printf("I am a simple "); /*使用printf()函数*/
+    printf("computer.\n");
     printf("My favorite number is %d because it is first.\n", num);
     return 0;
 }
 
-// 好啦，现在不装了，后面用中文
-/* program detail(程序的细节)
+/*示例解释*/
+/*
+1.# include :预处理命令
+2.int main(void): main()函数是第一个被调用的函数
+3.函数由语句构成，函数是C程序的生成模块
+4.C语言最小元素：(1) 关键字
+                (2) 标识符
+                (3) 运算符
+                (4) 数据
+5.C语言基本元素：(1) 声明语句
+                (2) 赋值语句
+                (3) 函数语句
+                (4) 控制语句
+                (5) 空语句
+6.“\n”：光标移至下一行开始
+7.“{”：函数定义的开始
+  “}”：函数定义的结束
+*/
+
+/* program detail(程序的细节)*/
+/*
 1.# include指令和头文件
 tip1：# include<stdio.h>
 这是一种“拷贝-粘贴”的操作，此操作将stdio.h文件中的所有内容输入
